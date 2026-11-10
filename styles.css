@@ -1,5 +1,5 @@
 /* ============================================================
-   RateYinzLandlord Pittsburgh — Main Stylesheet
+   Rate Your Landlord MSU — Main Stylesheet
    ============================================================ */
 
 /* --- 1. Design Tokens --- */
@@ -7,36 +7,39 @@
 @import "./alegreya-webfont/style.css";
 
 :root {
-  --blue-100: #D9F2FF;
-  --blue-200: #A3CFFC;
-  --blue-300: #2E57FA;
-  --blue-400: #0000FF;
-  --blue-500: #030061;
-  --neutral-100: #FFFFE8;
-  --neutral-200: #A6A6A3;
-  --neutral-300: #5C616B;
-  --neutral-400: #242945;
-  --neutral-500: #000826;
-  --secondary-100: #D4FCD4;
-  --secondary-200: #8FFFBA;
-  --secondary-300: #00FF82;
-  --secondary-400: #00BD66;
-  --secondary-500: #00302E;
+  --primary: #18453B;
+  --secondary: #FFFFFF;
+  --accent: #0B9A6D;
+  --blue-100: #E5F4EE;
+  --blue-200: #B7DDCD;
+  --blue-300: var(--accent);
+  --blue-400: #087D58;
+  --blue-500: #18453B;
+  --neutral-100: var(--secondary);
+  --neutral-200: #E7EEEB;
+  --neutral-300: #64736F;
+  --neutral-400: #344A44;
+  --neutral-500: #18362F;
+  --secondary-100: #E5F4EE;
+  --secondary-200: #B7DDCD;
+  --secondary-300: var(--accent);
+  --secondary-400: #087D58;
+  --secondary-500: #18453B;
   --red-100: #FFDBE0;
   --red-200: #FA8FA3;
   --red-300: #F21242;
   --red-400: #B81238;
   --red-500: #631429;
-  --highlight-100: #FFFFB2;
-  --highlight-200: #F2FF78;
-  --highlight-300: #D4FC00;
-  --highlight-400: #99C200;
-  --highlight-500: #528200;
-  --primary-100: #F7EBFF;
-  --primary-200: #E5D4FF;
-  --primary-300: #9470FF;
-  --primary-400: #5933BF;
-  --primary-500: #29008A;
+  --highlight-100: #E5F4EE;
+  --highlight-200: #B7DDCD;
+  --highlight-300: var(--accent);
+  --highlight-400: #087D58;
+  --highlight-500: #18453B;
+  --primary-100: var(--secondary);
+  --primary-200: #F1F6F4;
+  --primary-300: #087D58;
+  --primary-400: #12604F;
+  --primary-500: var(--primary);
   --shadow-sm: 0 1px 2px 0 rgb(from var(--neutral-500) r g b / 0.05);
   --shadow: 0 1px 3px 0 rgb(from var(--neutral-500) r g b / 0.1), 0 1px 2px -1px rgb(from var(--neutral-500) r g b / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(from var(--neutral-500) r g b / 0.1), 0 2px 4px -2px rgb(from var(--neutral-500) r g b / 0.1);
@@ -504,7 +507,7 @@ ol {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: var(--neutral-500);
+  background-color: var(--neutral-100);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -529,7 +532,7 @@ ol {
   position: sticky;
   top: 0;
   z-index: 50;
-  background-color: var(--neutral-500);
+  background-color: var(--neutral-100);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--shadow-sm);
@@ -566,7 +569,7 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--neutral-100);
+  color: var(--neutral-500);
   font-weight: 700;
   font-size: 1.125rem;
   transition: transform 0.15s;
@@ -612,7 +615,7 @@ ol {
 .site-nav__link {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--neutral-100);
+  color: var(--neutral-500);
   text-decoration: none;
   transition: color 0.15s;
 }
@@ -664,7 +667,7 @@ ol {
 .header-user-email {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--neutral-100);
+  color: var(--neutral-500);
 }
 
 .header-user-role {
@@ -690,7 +693,7 @@ ol {
 .header-logout {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--neutral-200);
+  color: var(--neutral-400);
   background: none;
   border: none;
   cursor: pointer;
@@ -711,7 +714,7 @@ ol {
 }
 
 .header-login-link:hover {
-  color: var(--neutral-100);
+  color: var(--primary-300);
 }
 
 .header-signup-btn {

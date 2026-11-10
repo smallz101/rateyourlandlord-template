@@ -88,7 +88,7 @@ The website uses **Vite**, a tool that runs a local development website and buil
 3. In VS Code's terminal, type `npm ci --registry=https://registry.npmjs.org/` and press Enter. This installs the versions recorded in the lockfile. **You should see installation finish without an `npm error`.** Warnings or security-audit notices are different from a failed install, but should still be reviewed before public use.
 4. Type `npm run dev` and press Enter.
 5. Look for Vite's **Local** address. This repository requests port **5000**, so the usual address is `http://localhost:5000/`, not 3000 or 5173. If the port is busy, Vite may print a different port; use the printed address for browsing.
-6. Open that address in your browser. **You should see the landlord page and a “Demo mode — showing fake data” banner.**
+6. Open that address in your browser. **You should see the landlord page and a “Demo mode — showing the MSU landlord directory only” banner.** The directory contains the supplied landlord/property list; it does not include tenant reviews.
 7. Search for a landlord and open a landlord card. The names and reviews are fictional demonstration data. Some review displays may be incomplete because the demo and current review form use different rating fields.
 8. Do not expect registration, sign-in, or password reset to work in the demo. `MockAuthService` deliberately returns “not available in demo mode.” Some submission forms also need a configured security challenge.
 9. Changes made to the demonstration data are held in memory. They are not shared with other computers and are reset when the application reloads.
@@ -119,7 +119,7 @@ SQL is the language used to set up database tables, which are lists of records s
 2. In your **new trial project**, open Supabase's **SQL Editor**, create a new query, paste the text, and click **Run**.
 3. Inspect the result. **TO CONFIRM:** the script's successful execution and compatibility must be checked against your actual project. This documentation review did not execute it in a new Supabase account. If it reports an error, stop and ask the maintainer to review it; do not improvise a replacement schema or disable security.
 4. Open **Table Editor** and select the `public` schema if asked. Look for `landlords`, `reviews`, and `admins`.
-5. Inspect the sample data. It is not your community's real review history. Keep the project clearly marked as a trial until you have planned which sample records to remove.
+5. Inspect the landlord directory. It contains the supplied East Lansing landlord/property list and no review history. Keep the project clearly marked as a trial until you confirm the directory and decide whether it belongs in your copy.
 6. Confirm the project's **Data API** is enabled for the intended public tables. Supabase's current documentation places those settings under **Integrations → Data API**. **TO CONFIRM:** this location and defaults can vary with project creation settings. Ask for help if the expected tables are unavailable; do not expose additional tables indiscriminately.
 
 **Stopping point — current review fields:** the form sends `landlord_rating`, `building_rating`, and `tags`, while the supplied review-table definition uses a different rating model. A maintainer must reconcile that model before you can rely on real review submissions. This guide does not supply a database migration or promise that filling in keys completes that work.

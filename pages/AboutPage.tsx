@@ -4,31 +4,23 @@ const AboutPage: React.FC = () => {
   return (
     <div className="about-page">
       <div className="hero">
-        <h1>About RATE YOUR LANDLORD</h1>
-        <p className="hero__subtitle">A community-driven platform for [insert location here] tenants</p>
+        <h1>About Rate Your Landlord MSU</h1>
+        <p className="hero__subtitle">A community-driven platform for East Lansing tenants</p>
       </div>
 
       <div className="about-sections">
         <section>
           <h2>Our Mission</h2>
           <p>
-            [insert your own mission here]
-
+            Tenants in East Lansing deserve to know what they're getting into when searching for a place to live, and the public deserves to know about negligent landlords. With Rate Your Landlord MSU, you can read first hand accounts from your neighbors and share about your experiences as a tenant. The way the site works is simple: you can give your landlord a grade – it’s Rate My Professor, but for your landlord. Rate Your Landlord Michigan State is part of More Perfect University’s national Rate Your Landlord campaign.
           </p>
         </section>
-
-        <section>
-          <h2>How It Works</h2>
-          <p>
-            The site is easy and simple to use: it’s Rate My Professor, but for your landlord. Give your landlord a letter grade and read testimonies from your neighbors. The information collected will remain totally anonymous and secure. 
-          </p>
-        </section>
-
 
         <section>
           <h2>Get Involved</h2>
           <p>
-            Know a landlord who isn't listed yet? Add them. Had a recent experience worth sharing? Write a review. The more people participate, the more useful this platform becomes for tenants. You can email us at <a href="mailto:[insert email here]">[insert email here]</a>.
+            Know a landlord who isn't listed yet? Add them. Had a recent experience worth sharing? Write a review. The more people participate, the more useful this platform becomes for tenants. Email us at{' '}
+            <a href="mailto:rylmichiganstate@gmail.com">rylmichiganstate@gmail.com</a>.
           </p>
         </section>
       </div>

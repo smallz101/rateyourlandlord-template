@@ -11,7 +11,7 @@ export interface Review {
   bedrooms?: number;
   property_address?: string;
   verification_status: 'unverified' | 'pending' | 'verified';
-  created_by_student: boolean; // True if user email ends with pitt.edu or cmu.edu
+  created_by_student: boolean; // True if the user email ends with msu.edu
   tags?: string[];
   is_deleted: boolean;
   created_at: string;
@@ -32,4 +32,3 @@ export interface User {
   id: string; // UUID from Supabase Auth
   email: string;
 }
-

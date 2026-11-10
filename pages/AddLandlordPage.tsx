@@ -116,7 +116,7 @@ const AddLandlordPage: React.FC = () => {
     }
 
     setUploading(true);
-    const landlordData = { name, addresses: address ? [address] : undefined, city: 'College Park' };
+    const landlordData = { name, addresses: address ? [address] : undefined, city: 'East Lansing' };
     let reviewData;
     if (addReview) {
       reviewData = {
@@ -212,7 +212,7 @@ const AddLandlordPage: React.FC = () => {
                 onChange={e => setAddress(e.target.value)}
                 className="form-input"
                 autoComplete="street-address"
-                placeholder="e.g., 123 Main St, Pittsburgh, PA"
+                placeholder="e.g., 123 Grand River Ave, East Lansing, MI"
               />
             </AddressAutofill>
           </div>

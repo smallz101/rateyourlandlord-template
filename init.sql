@@ -1,4 +1,4 @@
--- Database setup script for Rate My Landlord
+-- Database setup script for Rate Your Landlord MSU
 -- This script sets up the tables, sequences, RLS policies, storage bucket, and seed data.
 
 -- 1. Create admins table
@@ -29,7 +29,6 @@ CREATE TABLE IF NOT EXISTS public.reviews (
   landlord_rating integer NOT NULL CHECK (landlord_rating >= 1 AND landlord_rating <= 5),
   building_rating integer NOT NULL CHECK (building_rating >= 1 AND building_rating <= 5),
   beds integer CHECK (beds >= 0),
-  votes
   comment text NOT NULL,
   tags text[] DEFAULT '{}'::text[], 
   rent_amount numeric,
@@ -125,19 +124,16 @@ CREATE POLICY "Users can update own reviews" ON public.reviews
   FOR UPDATE TO public USING (auth.uid() = user_id);
 
 
--- 10. Seed Initial Data (Landlords and Reviews)
+-- 10. Seed the MSU East Lansing landlord directory without fabricated reviews
 INSERT INTO public.landlords (id, name, addresses, city, status) OVERRIDING SYSTEM VALUE VALUES
-  (1, 'fake landlord 1', ARRAY['123 Forbes Ave', '456 Fifth Ave', '486 Fifth Ave', '458 Fifth Ave', '466 Fifth Ave'], 'Pittsburgh', 'approved'),
+  (1, 'DTN Management Co', ARRAY['1000 Village Dr (Cedar Village Apartments)'], 'East Lansing', 'approved'),
+  (2, 'Campus Community Management (CCM)', ARRAY['617 Elm St'], 'East Lansing', 'approved'),
+  (3, 'Cron Management', ARRAY['211 Ann St (The Residences)'], 'East Lansing', 'approved'),
+  (4, 'Hudgins Realty', ARRAY['225 Division Street (225 Division Street Apartments)'], 'East Lansing', 'approved'),
+  (5, 'Prime Housing Group', ARRAY['1390 E Grand River Ave (Cedarview East Apartments)'], 'East Lansing', 'approved'),
+  (6, 'MC Properties', ARRAY['1224 Frye Street'], 'East Lansing', 'approved'),
+  (7, 'Hagan Realty, Inc.', ARRAY['910 Abbot Road (Abbot Manor)'], 'East Lansing', 'approved')
 ON CONFLICT (id) DO NOTHING;
 
 -- Set sequence value to avoid collision with manual inserts
 SELECT setval('landlords_id_seq', COALESCE((SELECT MAX(id)+1 FROM public.landlords), 1), false);
-
-INSERT INTO public.reviews (id, landlord_id, landlord_rating, building_rating, beds, comment, tags, would_rent_again, rent_amount, property_address, verification_status, created_at, updated_at) OVERRIDING SYSTEM VALUE VALUES
-  (1, 1, 2, 2, 1, 'Fake review', ARRAY['So Many Bugs', 'Mold'], false, 1200, '123 Forbes Ave', 'unverified', '2023-07-10 12:00:00+00', '2023-07-10 12:00:00+00'),
-  (2, 1, 3, 3, 5, 'Fake review', ARRAY['Peeling Paint', 'Pet Friendly'], true, 1350, '123 Forbes Ave', 'verified', '2023-09-22 12:00:00+00', '2023-09-22 12:00:00+00'),
-  (3, 1, 1, 1, 0, 'Fake review', ARRAY['Peeling Paint', 'Pet Friendly'], false, NULL, '466 Fifth Avet', 'pending', '2023-06-05 12:00:00+00', '2023-06-05 12:00:00+00'),
-ON CONFLICT (id) DO NOTHING;
-
--- Set sequence value to avoid collision with manual inserts
-SELECT setval('reviews_id_seq', COALESCE((SELECT MAX(id)+1 FROM public.reviews), 1), false);

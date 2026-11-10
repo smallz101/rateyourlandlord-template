@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import miniLogo from '../mini-logo.png';
+import msuLogo from '../msu-logo.svg';
 
 const NAV_LINKS = [
   { label: 'Resources', to: '/resources' },
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
       <div className="site-header__inner">
         {/* Logo */}
         <Link to="/" className="site-logo" onClick={() => setMenuOpen(false)}>
-          <img src={miniLogo} alt="Rate Your Landlord [insert location]" className="site-logo__img" />
+          <img src={msuLogo} alt="Rate Your Landlord Michigan State" className="site-logo__img" />
         </Link>
 
         {/* Desktop nav links */}

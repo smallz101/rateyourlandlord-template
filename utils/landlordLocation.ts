@@ -1,4 +1,4 @@
-const DEFAULT_LANDLORD_CITY = 'college park';
+const DEFAULT_LANDLORD_CITY = 'east lansing';
 
 export function getDisplayLandlordCity(city: string): string | undefined {
   const trimmedCity = city.trim();
@@ -8,5 +8,5 @@ export function getDisplayLandlordCity(city: string): string | undefined {
 }
 
 export function formatLandlordAddress(address: string): string {
-  return address.replace(/,\s*College Park\b.*$/i, '').trim();
+  return address.replace(/,\s*East Lansing\b.*$/i, '').trim();
 }

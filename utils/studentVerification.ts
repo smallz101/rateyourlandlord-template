@@ -1,7 +1,7 @@
 /**
  * List of verified student email domains
  */
-const VERIFIED_STUDENT_DOMAINS = ['pitt.edu', 'cmu.edu'];
+const VERIFIED_STUDENT_DOMAINS = ['msu.edu'];
 
 /**
  * Checks if an email belongs to a verified student domain

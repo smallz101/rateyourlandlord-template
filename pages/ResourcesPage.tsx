@@ -5,26 +5,17 @@ const ResourcesPage: React.FC = () => {
     {
       category: "Tenant Rights and Awareness",
       links: [
-        { title: "Resources", url: "resource.com", description: "Resource description" },
-         { title: "Resources", url: "resource.com", description: "Resource description" },
-         { title: "Resources", url: "resource.com", description: "Resource description" },
+        { title: "Tenant Resource Center", url: "https://trcmm.org/", description: "Tenant and housing resources for the Mid-Michigan community." },
+        { title: "MSU Off-Campus Housing", url: "https://offcampushousing.msu.edu/", description: "Off-campus housing information for Michigan State students." },
+        { title: "East Lansing Fair Housing", url: "https://www.cityofeastlansing.com/256/Fair-Housing", description: "Fair housing information from the City of East Lansing." },
       ]
     },
     {
       category: "Legal Aid",
       links: [
-         { title: "Resources", url: "resource.com", description: "Resource description" },
-         { title: "Resources", url: "resource.com", description: "Resource description" },
-         { title: "Resources", url: "resource.com", description: "Resource description" },
-      ]
-    },
-    {
-      category: "Hotlines",
-      links: [
-         { title: "Resources", url: "resource.com", description: "Resource description" },
-         { title: "Resources", url: "resource.com", description: "Resource description" },
-         { title: "Resources", url: "resource.com", description: "Resource description" },
-
+        { title: "Michigan Legal Help", url: "https://michiganlegalhelp.org/resources/housing", description: "Michigan legal information and resources about housing." },
+        { title: "MSU Student Legal Services", url: "https://studentlegalservices.com/landlord-and-tenant-issues.html", description: "Landlord and tenant information from MSU Student Legal Services." },
+        { title: "MSU Law Housing Clinic", url: "https://law.msu.edu/clinics-centers-institutes/clinics/housing", description: "Housing clinic information from Michigan State University College of Law." },
       ]
     }
   ];
@@ -33,7 +24,7 @@ const ResourcesPage: React.FC = () => {
     <div className="resources-page">
       <div className="hero">
         <h1>Renter Resources</h1>
-        <p className="hero__subtitle">Helpful information, legal aid, and support for tenants in [insert location here].</p>
+        <p className="hero__subtitle">Helpful information, legal aid, and support for tenants in East Lansing.</p>
       </div>
       <div className="resources-content">
         <div className="resources-categories">

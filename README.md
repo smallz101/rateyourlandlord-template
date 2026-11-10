@@ -1,6 +1,6 @@
 # Make your own Rate Your Landlord website
 
-This repository contains a website for finding landlords, reading reviews, and submitting ratings. It currently includes Pittsburgh-specific examples, branding, and text. A personal copy does not automatically become a working public service.
+This MSU customization contains a website for finding landlords, reading reviews, and submitting ratings in East Lansing. Its branding and sample property records are configured for Rate Your Landlord Michigan State; a personal copy does not automatically become a working public service.
 
 **Start here: [the step-by-step setup guide](docs/replication_guide.md).** It covers Windows and Mac, a local demonstration, Supabase, Cloudflare Pages, a domain name, email sign-in links, and checks before sharing.
 
@@ -21,7 +21,7 @@ Check each provider's current pricing, limits, and account requirements before e
 
 ## Choose your next step
 
-1. **Just looking?** Follow [parts 1–3](docs/replication_guide.md#1-make-your-personal-github-copy) of the guide. Without Supabase settings, the website displays fake data. Registration and sign-in do not work in this demonstration.
+1. **Just looking?** Follow [parts 1–3](docs/replication_guide.md#1-make-your-personal-github-copy) of the guide. Without Supabase settings, the website displays the MSU sample landlord directory, with no tenant reviews. Registration and sign-in do not work in this demonstration.
 2. **Connecting real data?** Continue with [Supabase setup](docs/replication_guide.md#4-create-a-supabase-project). Stop at any failed check; do not enter real tenant information to troubleshoot.
 3. **Putting a trial site online?** Follow [Cloudflare Pages setup](docs/replication_guide.md#8-publish-a-trial-site-with-cloudflare-pages), then the domain and sign-in sections.
 4. **Before inviting anyone?** Complete [the sharing checklist](docs/replication_guide.md#11-test-before-sharing). A successful build alone is not a security review or evidence that every feature works.
@@ -34,7 +34,7 @@ Check each provider's current pricing, limits, and account requirements before e
 - Turnstile completion is checked in the browser, but its token is not sent for server verification. Do not treat the displayed challenge as complete spam protection.
 - The real data service does not implement verification-document uploads. Do not collect real verification documents.
 - The review form and database setup use different rating fields. See the [setup checks and limitations](docs/architecture.md#setup-checks-and-limitations) before trying real submissions.
-- Existing branding, legal placeholders, contact information, and local assumptions need review for your own site.
+- Legal terms and privacy language still need owner review before public use.
 
 This documentation does **not** certify the project as production-ready, select a license, or grant rights to reuse branding, fonts, or other assets.
 

@@ -21,7 +21,7 @@ This reference supports the [plain-English setup guide](replication_guide.md). I
 | `vite.config.ts` | Server port 5000; Vite build; environment loading from the repository root. |
 | `.gitignore` | `node_modules`, `dist`, `.env`, and `*.local` files are ignored. |
 | `services/supabase.ts` | Exact Supabase setting names and demo-mode condition. |
-| `services/MockApiService.ts`, `services/MockAuthService.ts` | In-memory sample records and deliberately unavailable demo authentication. |
+| `services/MockApiService.ts`, `services/MockAuthService.ts` | In-memory MSU landlord directory with no reviews and deliberately unavailable demo authentication. |
 | `services/SupabaseApiService.ts`, `services/SupabaseAuthService.ts` | Real database calls, admin lookup, auth options, and absence of a real upload method. |
 | `context/AuthContext.tsx` | Confirmation redirect `/verify-email?verification=1`; reset redirect `/reset-password`; session admin-status caching. |
 | `pages/RegisterPage.tsx`, `pages/LoginPage.tsx` | Challenge behavior for registration/reset; ordinary login uses email/password. |

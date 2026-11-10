@@ -180,7 +180,7 @@ const ReviewForm: React.FC<ReviewFormProps> = ({
             id="propertyAddress"
             value={propertyAddress}
             onChange={e => setPropertyAddress(e.target.value)}
-            placeholder="e.g., 123 Main St, Pittsburgh, PA"
+            placeholder="e.g., 123 Grand River Ave, East Lansing, MI"
             className="form-input"
             autoComplete="street-address"
             required
